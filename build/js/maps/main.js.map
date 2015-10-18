@@ -1,0 +1,1 @@
+{"version":3,"sources":["test1.js","test2.js"],"names":["ioio","wewe"],"mappings":"AAAA,KAAAA,MAAA,MCAAC,KAAA","file":"main.js","sourcesContent":["const ioio = 'top';\n","const wewe = 'world';\n"],"sourceRoot":"/source/"}
