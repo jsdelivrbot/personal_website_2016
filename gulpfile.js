@@ -54,6 +54,8 @@ var $ = require('gulp-load-plugins')({lazy: true});
 //  browser-sync module
 var browserSync = require('browser-sync').create();
 //
+var mainBowerFiles = require('main-bower-files');
+//
 //  -------------------------------------
 
 
@@ -85,6 +87,39 @@ function log(msg) {
 gulp.task('list', function() {
   log('list all tasks registered');
   $.taskListing();
+});
+//
+//  -------------------------------------
+
+
+
+//  -------------------------------------
+//  Task: export: library
+//  -------------------------------------
+//
+gulp.task('export:library', function() {
+
+	var jsFilter = $.filter(['**/*.js'], {restore: true});
+	var cssFilter = $.filter('**/*.css', {restore: true});
+
+	return gulp
+		.src(mainBowerFiles())
+
+	  .pipe(jsFilter)
+		.pipe($.using({
+      prefix: 'export:js',
+      color: 'yellow'
+    }))
+	  .pipe(gulp.dest(config.build.VendorJs))
+	  .pipe(jsFilter.restore)
+
+    .pipe(cssFilter)
+		.pipe($.using({
+      prefix: 'export:css',
+      color: 'yellow'
+    }))
+    .pipe(gulp.dest(config.build.VendorCss));
+
 });
 //
 //  -------------------------------------
@@ -166,7 +201,7 @@ gulp.task('watch:js', ['uglify:js'], browserSync.reload);
 gulp.task('compile:css', function () {
     log('Compiling Sass --> CSS');
     return gulp
-        .src(config.src.sass)
+        .src(config.src.applicationSass)
         .pipe($.plumber())
         .pipe($.sourcemaps.init())
 				.pipe($.using({
@@ -247,7 +282,7 @@ gulp.task('serve',['build'] ,function() {
     });
 
     gulp.watch(config.src.js, ['watch:js']);
-		gulp.watch(config.src.sass, ['watch:css']);
+		gulp.watch(config.src.allSass, ['watch:css']);
 		gulp.watch(config.src.allJade, ['watch:html']);
 });
 //  -------------------------------------

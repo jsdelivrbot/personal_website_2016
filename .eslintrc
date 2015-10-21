@@ -4,6 +4,13 @@
     "no-unused-vars": [0, {"vars": "all", "args": "after-used"}],
     "jsx-quotes": 0,
     "func-names": 0,
-    "no-console": 0
+    "no-console": 0,
+    "camelcase": [0, {"properties": "never"}]
+  },
+  "env": {
+    "jquery": true
+  },
+  "globals": {
+    "Github": false,
   }
 }

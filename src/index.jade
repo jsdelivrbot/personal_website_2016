@@ -3,3 +3,134 @@ extends ./template/general/basic
 append config
   - var pageTitle = "Ron Yu portfolio"
   - var metaDesc = "index" 
+  
+
+block content
+  main
+    article#index
+      article#home
+        .desc
+          hgroup
+            h1.tltOnce
+              | Ron Yu
+            h2.tltOnce
+              | < Front End Developer />
+            h3.tlt
+              ul.texts
+                li Programming is more than a job. It's an attitude in life. 
+                li Don’t worry if it doesn’t work right. If everything did, you’d be out of a job.
+                li efore software can be reusable it first has to be usable.          
+      article#about.ui.two.column.grid
+        article.image-show.column
+          .owl-carousel.owl-theme
+            #slider-item1.slider-item
+              section.slider-content-wrapper
+                .ui.grid.two.column
+                  .column.inner-wrapper
+                    i.devicon-html5-plain-wordmark.colored
+                  .column.inner-wrapper
+                    i.devicon-css3-plain-wordmark.colored
+                  .column.inner-wrapper
+                    i.devicon-javascript-plain.colored
+                  .two.column.row
+                    .slider-desc
+                      h1 programming language
+                      p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium explicabo soluta odit. Aliquam ducimus impedit eligendi labore eaque suscipit quae.
+            #slider-item2.slider-item
+              section.slider-content-wrapper
+                .ui.grid.two.column
+                  .column.inner-wrapper
+                    i.devicon-bootstrap-plain-wordmark.colored
+                  .column.inner-wrapper
+                    i.devicon-foundation-plain-wordmark.colored
+                  .column.inner-wrapper
+                    i.devicon-angularjs-plain-wordmark.colored
+                  .column.inner-wrapper
+                    i.devicon-react-original-wordmark.colored
+                  .two.column.row
+                    .slider-desc
+                      h1 library and framework
+                      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat voluptatibus obcaecati, eaque quidem earum ipsa ab fuga enim necessitatibus quae.
+            #slider-item3.slider-item
+              section.slider-content-wrapper
+                .ui.grid.two.column
+                  .column.inner-wrapper
+                    i.devicon-gulp-plain.colored
+                  .column.inner-wrapper
+                    i.devicon-bower-plain-wordmark.colored
+                  .column.inner-wrapper
+                    i.devicon-git-plain-wordmark.colored
+                  .column.inner-wrapper
+                    i.devicon-sass-original.colored
+                  .two.column.row
+                    .slider-desc
+                      h1 tools
+                      p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro earum ratione optio rerum vero distinctio sequi nulla dolorem, quisquam tempora?
+          .slider-nav-control
+            i.chevron.left.icon
+            i.chevron.right.icon
+        article.desc.column
+          .inner-desc.big-head
+            img(src="./assets/img/head.jpg", alt="")
+          .inner-desc.brief-introduction
+            h2 Brief
+            p I am a web designer and developer living in Taiwan.
+            p Stepping into the digital world because I am impressed with the combination of logical programming and creative design as an excellent collection of amazing art.
+            p As a self-teaching person, I start learning programming through online resource like Treehouse or Quora and trying to reach out the first step of web design.
+            p Now I work for Asia Fusion Technology as a front-end developer.
+          .ui.divider
+          .inner-desc.web-development
+            h2 Web Develpment
+            p Self-learner form scratch to real programming.
+            p One year experience as a front-end developer in AFT
+            p Development of user interface for web site / application by HTML5, CSS3 and JavaScript
+            p Equipped with knowledge of Javascript library / framework including React and Angular.
+            p Familiar with HTML5, CSS preprocessor and build tools such as gulp and webpack.
+            p Implement HTML5 semantic tags and features in practice.
+            p Control CSS preprocessors structure by MVCSS or SMACSS.
+            p Reach out MVC concept in JavaScript frameworks like Angular and Vue
+          .ui.divider
+          .inner-desc.web-design
+            h2 Web Design
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum animi nulla quas est sequi, ratione blanditiis, enim nemo vitae iste?
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe explicabo iure labore ut temporibus nam fuga cumque sunt, sit tenetur?
+            p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio ipsam deleniti ut minus natus error doloremque omnis tenetur nemo repellat.
+      article#work.ui.grid.two.column
+        .column.github-wrapper
+          h2.git-title Github Repository
+          .user-1
+          .repo-1
+        .column.work-gallery
+          h2.work-title Work Gallery
+          .work-gallery-inner.ui.grid.two.column
+            .item1.column
+              a(href="http://ronyu.lionfree.net/" target="_blank")
+                p Personal Website 2016
+            .item2.column
+              a(href="http://rontest.lionfree.net/" target="_blank")
+                p Personal Website 2015
+            .item3.column
+              a(href="http://ron1.lionfree.net/" target="_blank")
+                p Interview Question 2015
+            .item4.column
+              a(href="http://ron2.lionfree.net/" target="_blank")
+                p Personal Resume 2015
+          
+      article#footer.ui.grid
+        .row
+          .ui.list.relaxed.horizontal.social-media-wrapper
+            .item
+              a(href="https://www.facebook.com/ron.yu.1232" target="_blank")
+                i.facebook.aquare.icon
+            .item
+              a(href="http://tw.linkedin.com/in/RonYuPortfolio" target="_blank")
+                i.linkedin.aquare.icon
+            .item
+              a(href="https://github.com/Ron-Yu" target="_blank")
+                i.github.icon
+            .item
+              a(href="mailto:ronyu77@gamil.com")
+                i.mail.outline.icon
+        .row
+          p.copy-right © 2015 - 2016 Ron Yu All Rights Reserved
+            
